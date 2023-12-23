@@ -1,0 +1,141 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.navbar, 
+.navbar li, 
+.navbar a{
+    position: relative;
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: bold;
+}
+.logo{
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    text-decoration: none;
+
+    font-family: Arial;
+    font-size: 14px;
+}
+.logo h1{
+    color: black;
+}
+.logo p{
+    color: #727272;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar{
+    justify-content: space-between;
+    align-items: center;
+    width: 34%;
+    margin: auto;
+    padding: 5em 0;
+}
+.navbar a{
+    color: #7e7e7e;
+    transition: 0.5s ease;
+}
+nav .social{
+    display: flex;
+    width: 8.5%;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+nav .social img{
+    height: 2em;
+}
+.aboutbtn{
+    color: #000000 !important;
+}
+.aboutbtn::after{
+    content: '';
+    width: 70%;
+    height: 3px;
+    position: absolute;
+    background: #000000;
+    left: 0;
+    bottom: -7px;
+}
+
+.about .container{
+    background-color: #f0f0f0;
+}
+.about .contents{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+}
+.about h1{
+    font-family: Inter;
+    font-size: 95px;
+    margin: .5em 1em .2em;
+}
+.about .contents p{
+    font-family: Inter;
+    font-size: 30px;
+    margin: 1em 3.1em;
+}
+.about h2{
+    font-family: Inter;
+    margin: 2em 3.8em;
+}
+
+.techstack .container{
+    display: grid;
+    margin: 0em 6em;
+    margin-bottom: 8em;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    grid-auto-rows: minmax(6em, auto);
+}
+.techstack h2{
+    margin-bottom: 1em;
+}
+.techstack .container div{
+    display: flex;
+    justify-content: center;
+    padding: 3em 0em;
+    background-color: #949494;
+    color: white;
+    font-family: Inter;
+}
+
+footer .container{
+    display: flex;
+    margin: auto;
+    background-color: #f0f0f0;
+}
+footer .contents{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    width: 70em;
+    border-top: 1px solid rgb(168, 168, 168);
+}
+footer h1{
+    font-size: 1.2em;
+    font-family: Inter;
+}
+footer .social{
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .social img{
+    height: 2em;
+}

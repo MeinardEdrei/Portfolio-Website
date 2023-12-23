@@ -1,0 +1,222 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.navbar, 
+.navbar li, 
+.navbar a{
+    position: relative;
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    font-family: Arial;
+    font-weight: bold;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.navbar{
+    justify-content: space-between;
+    align-items: center;
+    width: 34%;
+    margin: 0em 8.5em;
+    padding: 5em 0em;
+}
+.navbar a{
+    color: #7e7e7e;
+    transition: 0.5s ease;
+}
+.navbar a:hover{
+    color: #000000;
+}
+.navbar li::after{
+    content: '';
+    width: 0;
+    transition: 0.3s ease-in-out;
+}
+.navbar li:hover::after{
+    content: '';
+    width: 70%;
+    height: 3px;
+    position: absolute;
+    background: #000000;
+    left: 0;
+    bottom: -7px;
+}
+nav .social{
+    display: flex;
+    width: 8.5%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0em 8.5em;
+}
+nav .social img{
+    height: 2em;
+}
+.home{
+    height: 460px !important;
+    display: flex;
+    margin: -1em 7em 12em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.home .pfp{
+    margin-top: -.2em;
+    height: 22em;
+    /* border-radius: 200px; */
+    border-radius: 42% 58% 70% 30% / 69% 56% 44% 31% ;
+    box-shadow: 5px 10px 10px 1px rgb(190, 190, 190);
+    filter: saturate(150%);
+}
+.pfpIcon{
+    display: flex;
+    float: right;
+    position: absolute;
+    right: 46%;
+    top: 325px;
+    font-size: 60px;
+    font-family: Inter;
+    font-weight: 900;
+    color: rgb(0, 0, 0);
+}
+.home h1{
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 42px;
+    margin: 0;
+}
+.home p{
+    font-family: Inter;
+    font-size: 20px;
+}
+.home .one{
+    height: 2em;
+    font-weight: bold;
+    color: #353535;
+    padding-bottom: 2px;
+    border-bottom: 2px solid rgb(128, 128, 128);
+}
+.home .two{
+    font-weight: bold;
+}
+.home p{
+    margin: 18px 0px 10px 0px;
+}
+/* .home p:nth-child(3){
+    margin-bottom: -10px;
+} */
+.home p:nth-child(3){
+    font-size: 18px;
+    color:#5B5B5B;
+}
+
+.home .buttons{
+    display: flex;
+    margin-top: 25px;
+}
+.home .btn1{
+    font-family: Inter;
+    text-decoration: none;
+    padding: 10px 5rem 10px 5rem;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+.home .btn2{
+    font-family: Inter;
+    text-decoration: none;
+    margin: 0 1rem;
+    padding: 13px;
+    background-color: rgb(235, 235, 235);
+    border: none;
+    color: black;
+    border-radius: 5px;
+}
+.home .btn1:hover, .btn2:hover{
+    filter: contrast(85%);
+}
+
+.home2{
+    background-color: #f0f0f0;
+}
+.home2 .contents{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-top: 15em;
+    width: 63em;
+    height: 15em;
+}
+.home2 .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+    padding-bottom: 25em;
+    margin-top: -4em;
+}
+.home2 h1{
+    font-size: 120px;
+    line-height: 0.9em;
+    font-family: Inter;
+}
+.home2 img{
+    display: inline-flex;
+    width: 63em;
+}
+.home2 .viewall{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 4px 4px 8px rgb(190, 188, 188);
+    border-radius: 5px;
+    font-family: Inter;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: black;
+    text-decoration: none;
+    gap: 10px;
+}
+.home2 .contents img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 1em;
+}
+
+footer .container{
+    display: flex;
+    margin: auto;
+    background-color: #f0f0f0;
+}
+footer .contents{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    height: 150px;
+    width: 70em;
+    border-top: 1px solid rgb(168, 168, 168);
+}
+footer h1{
+    font-size: 1.2em;
+    font-family: Inter;
+}
+footer .social{
+    display: flex;
+    width: 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .social img{
+    height: 2em;
+}
