@@ -158,6 +158,7 @@ nav .social img{
     margin-bottom: 0em;
 }
 .home2 .number{
+    z-index: 1;
     position: relative;
     font-family: inter;
     font-weight: bold;
@@ -167,9 +168,10 @@ nav .social img{
     left: -32em;
 }
 .home2 .content-title{
+    z-index: 1;
     position: absolute;
     top: 55.5em;
-    left: 12em;
+    left: 11em;
     font-family: inter;
     font-size: 20px;
     font-weight: bold;
@@ -182,22 +184,23 @@ nav .social img{
     line-height: 0.9em;
     font-family: Inter;
 }
-.home2 .container .contentimg{
-    transition: .5s ease;
+.home2 .images{
+    overflow: hidden;
     display: inline-flex;
     width: 64em;
     padding: 5rem;
     margin: -1em;
     background: linear-gradient(to bottom, #000000, #808080);
 }
-.home2 .container .contentimg:hover{
+.home2 .images img{
     transition: .5s ease;
-    display: block;
+    margin-left: -3em;
+    width: 60em;
+}
+.home2 .images img:hover{
+    transition: .5s ease;
     height: auto;
-    padding: 5rem;
-    width: 66rem;
-    margin: -1em;
-    background: linear-gradient(to bottom, #000000, #808080);
+    transform: scale(1.5);
 }
 .home2 .viewall{
     display: flex;

@@ -68,3 +68,14 @@ nav .social img{
     left: 0;
     bottom: -7px;
 }
+
+.images{
+    padding: 1rem;
+    background: linear-gradient(to bottom, #000000, #808080);
+    margin-left: 1rem;
+    width: 52rem;
+}
+.images img{
+    height: 22rem;
+    width: 50rem;
+}
