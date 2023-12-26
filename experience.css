@@ -186,7 +186,7 @@ footer .contents{
     align-items: center;
     height: 150px;
     width: 70em;
-    border-top: 1px solid rgb(168, 168, 168);
+    border-top: 1.5px solid rgb(168, 168, 168);
 }
 footer h1{
     font-size: 1.2em;

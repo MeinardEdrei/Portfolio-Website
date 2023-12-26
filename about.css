@@ -44,7 +44,6 @@
 }
 .navbar a{
     color: #7e7e7e;
-    transition: 0.5s ease;
 }
 nav .social{
     display: flex;
@@ -71,6 +70,7 @@ nav .social img{
 
 .about .container{
     background-color: #f0f0f0;
+    cursor: default;
 }
 .about .contents{
     display: flex;
@@ -82,34 +82,100 @@ nav .social img{
     font-size: 95px;
     margin: .5em 1em .2em;
 }
-.about .contents p{
+.about .contents p:nth-child(1){
     font-family: Inter;
+    font-weight: bold;
     font-size: 30px;
-    margin: 1em 3.1em;
+    margin: 3.5em 3em 0em;
+}
+.about .contents p:nth-child(2),
+.about .contents p:nth-child(4){
+    font-family: Inter;
+    font-size: 20px;
+    margin: 2.5em 4.6em;
 }
 .about h2{
     font-family: Inter;
     margin: 2em 3.8em;
+    background-color: rgb(0, 0, 0);
+    padding: .5rem;
+    display: inline-block;
+}
+.contents h2{
+    margin: 2em 3em -35px;
+    font-family: Inter;
+    color: #ffffff;
+    font-size: 30px;
+    border-radius: 10px;
 }
 
 .techstack .container{
     display: grid;
-    margin: 0em 6em;
-    margin-bottom: 8em;
+    margin: 3.5em 6em;
+    margin-bottom: 5em;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
     grid-auto-rows: minmax(6em, auto);
 }
-.techstack h2{
-    margin-bottom: 1em;
+.techstack .container img{
+    border-radius: 10px;
+    align-items: center;
+    width: 50px;
+    position: relative;
 }
 .techstack .container div{
     display: flex;
-    justify-content: center;
-    padding: 3em 0em;
-    background-color: #949494;
-    color: white;
+    align-items: center;
+    gap: 1em;
+    font-weight: bold;
+    font-size: 1em;
+    padding: 1em 3em;
+    background-color: #dadada;
+    color: rgb(46, 46, 46);
     font-family: Inter;
+    box-shadow: 4px 4px 8px rgb(187, 187, 187);
+    border-radius: 5px;
+}
+
+.questions li{
+    list-style: none;
+    font-family: Inter;
+    font-size: 18px;
+    color: rgb(78, 78, 78);
+    margin: -2.2em 5em 3em;
+}
+
+.recommendations h3{
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0em 0em;
+}
+.recommendations p{
+    font-size: 18px !important;
+    margin: 2em 0em !important;
+    color: #313131;
+}
+.recommendations .contents{
+    margin: 4em 5.5em;
+    border-radius: 10px;
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: inter;
+}
+.name{
+    display: flex;
+    align-items: center;
+}
+.name p{
+    font-size: medium !important;
+    margin: 0 !important;
+}
+.recommendations .contents img{
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1rem;
 }
 
 footer .container{
@@ -124,7 +190,7 @@ footer .contents{
     align-items: center;
     height: 150px;
     width: 70em;
-    border-top: 1px solid rgb(168, 168, 168);
+    border-top: 1.5px solid rgb(168, 168, 168);
 }
 footer h1{
     font-size: 1.2em;
