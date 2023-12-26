@@ -102,16 +102,35 @@ nav .social img{
     display: inline-block;
 }
 .contents h2{
-    margin: 2em 3em -35px;
+    margin: 2em 2.9em -35px;
     font-family: Inter;
     color: #ffffff;
     font-size: 30px;
     border-radius: 10px;
 }
 
+.questions li{
+    list-style: none;
+    font-family: Inter;
+    font-size: 18px;
+    color: rgb(78, 78, 78);
+    margin: -2.2em 5em 0em;
+}
+.questions a{
+    color: rgb(75, 75, 75);
+    font-weight: bold;
+}
+.questions h2{
+    margin-left: 3em;
+}
+.questions{
+    margin: 0em 0em 3em;
+    max-width: 100%;
+}
+
 .techstack .container{
     display: grid;
-    margin: 3.5em 6em;
+    margin: 3.5em 5em;
     margin-bottom: 5em;
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
@@ -137,27 +156,23 @@ nav .social img{
     border-radius: 5px;
 }
 
-.questions li{
-    list-style: none;
-    font-family: Inter;
-    font-size: 18px;
-    color: rgb(78, 78, 78);
-    margin: -2.2em 5em 3em;
+.recommendations{
+    margin: 0 0 10em;
+    height: 900px;
 }
-
 .recommendations h3{
     font-family: Inter;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: normal;
-    margin: 0em 0em;
+    margin: 0em;
 }
 .recommendations p{
-    font-size: 18px !important;
-    margin: 2em 0em !important;
+    font-size: 15px !important;
+    margin: 2em 0em 1em !important;
     color: #313131;
 }
 .recommendations .contents{
-    margin: 3em 5.5em;
+    margin: 3em 5em -2em;
     border-radius: 10px;
     padding: 1rem;
     background-color: white;
@@ -169,13 +184,13 @@ nav .social img{
     align-items: center;
 }
 .name p{
-    font-size: medium !important;
+    font-size: small !important;
     margin: 0 !important;
 }
 .recommendations .contents img{
-    height: 3rem;
-    width: 3rem;
-    margin-right: 1rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: .8rem;
 }
 
 footer .container{

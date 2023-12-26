@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: inter;
 }
 
 .navbar, 
@@ -69,13 +70,33 @@ nav .social img{
     bottom: -7px;
 }
 
+section{
+    background-color: #f0f0f0;
+    padding: 1rem;
+}
+
 .images{
+    margin: 1em 1rem;
     padding: 1rem;
     background: linear-gradient(to bottom, #000000, #808080);
-    margin-left: 1rem;
     width: 52rem;
 }
 .images img{
-    height: 22rem;
-    width: 50rem;
+    width: 60rem;
+}
+.content-title{
+    z-index: 1;
+    position: relative;
+    left: 1rem;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.number{
+    z-index: 1;
+    position: relative;
+    top: 23rem;
+    left: 1rem;
+    color: white;
+    font-weight: bold;
 }
