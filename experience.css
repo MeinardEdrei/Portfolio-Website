@@ -142,7 +142,7 @@ section{
 .certificate .container > img{
     filter: saturate(50%);
     border-radius: 20px;
-    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgb(0, 0, 0, .1);
     width: 35em;
     height: 25em;
     transition: 0.3s ease-in-out;
