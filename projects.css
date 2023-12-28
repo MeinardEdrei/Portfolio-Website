@@ -106,7 +106,8 @@ section .container{
 
 .content1,
 .content2,
-.content3{
+.content3,
+.content4{
     padding: 1rem 2rem 7rem;
     background: linear-gradient(to top, #000000, #2c2c2c);
     width: 37rem;
@@ -121,7 +122,8 @@ section .container{
     image-rendering: optimizeQuality;
 }
 .content2 img,
-.content3 img{
+.content3 img,
+.content4 img{
     transition: .5s ease;
     height: 102%;
     width: 100%;
@@ -129,7 +131,8 @@ section .container{
 }
 .content1 a img:hover,
 .content2 a img:hover,
-.content3 a img:hover{
+.content3 a img:hover,
+.content4 a img:hover{
     transform: scale(1.04);
 }
 
