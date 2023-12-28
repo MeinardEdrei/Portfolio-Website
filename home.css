@@ -15,16 +15,32 @@
     font-family: Arial;
     font-weight: bold;
 }
-.container{
-    display: flex;
-    justify-content: space-between;
-}
-.navbar{
+.logo{
     justify-content: space-between;
     align-items: center;
-    width: 34%;
-    margin: -1em 8.5em;
-    padding: 5em 0em;
+    margin: auto;
+    text-decoration: none;
+
+    font-family: Arial;
+    font-size: 14px;
+}
+.logo h1{
+    color: black;
+}
+.logo p{
+    color: #727272;
+}
+nav .container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65%;
+    margin: auto;
+    padding: 5em 0;
 }
 .navbar a{
     color: #7e7e7e;
@@ -48,27 +64,26 @@
 }
 nav .social{
     display: flex;
-    width: 8.5%;
+    width: 30%;
     justify-content: space-between;
     align-items: center;
-    margin: 0em 8.5em;
+    margin: auto;
+    gap: 5px;
 }
 nav .social img{
-    height: 2em;
+    height: 1.8em;
 }
 
 .home{
     height: 460px !important;
     display: flex;
-    margin: .5em 7em 12em;
+    margin: -2em 0em 0em;
     justify-content: space-evenly;
     align-items: center;
-    /* border: 1px solid; */
 }
 .home .pfp{
     margin-top: -.2em;
     height: 22em;
-    /* border-radius: 200px; */
     border-radius: 42% 58% 70% 30% / 69% 56% 44% 31% ;
     box-shadow: 5px 10px 10px 1px rgb(190, 190, 190);
     filter: saturate(150%);
@@ -154,7 +169,7 @@ nav .social img{
     margin: 7em;
     padding-top: 16em;
     padding-bottom: 25em;
-    margin-top: -8em;
+    margin-top: 5em;
     margin-bottom: 0em;
 }
 .home2 .number{
@@ -245,10 +260,12 @@ footer h1{
 }
 footer .social{
     display: flex;
-    width: 10%;
+    width: 12%;
     justify-content: space-between;
     align-items: center;
+    margin: 0em 0em;
+    gap: 5px;
 }
 footer .social img{
-    height: 2em;
+    height: 1.8em;
 }

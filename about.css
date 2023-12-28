@@ -31,14 +31,15 @@
 .logo p{
     color: #727272;
 }
-.container{
-    display: flex;
-    justify-content: space-between;
+nav .container{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
 }
 .navbar{
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 34%;
+    width: 65%;
     margin: auto;
     padding: 5em 0;
 }
@@ -47,13 +48,14 @@
 }
 nav .social{
     display: flex;
-    width: 8.5%;
+    width: 30%;
     justify-content: space-between;
     align-items: center;
     margin: auto;
+    gap: 5px;
 }
 nav .social img{
-    height: 2em;
+    height: 1.8em;
 }
 .aboutbtn{
     color: #000000 !important;
@@ -75,7 +77,7 @@ nav .social img{
 .about .contents{
     display: flex;
     flex-direction: column;
-    margin-top: 1em;
+    margin-top: 0em;
 }
 .about h1{
     font-family: Inter;
@@ -213,10 +215,12 @@ footer h1{
 }
 footer .social{
     display: flex;
-    width: 10%;
+    width: 12%;
     justify-content: space-between;
     align-items: center;
+    margin: 0em 0em;
+    gap: 5px;
 }
 footer .social img{
-    height: 2em;
+    height: 1.8em;
 }
