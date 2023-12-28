@@ -71,18 +71,21 @@ nav .social img{
     bottom: -7px;
 }
 
-section{
+.projects{
     cursor: default;
     background-color: #f0f0f0;
     padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-section .container{
+.projects .container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2em;
-    margin: 2em 3em;
+    margin: 3.5em 3em;
     padding: 5em 0em 10em 0em;
-    max-width: 37rem;
+    max-width: 100%;
 }
 
 .content-title{

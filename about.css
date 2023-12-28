@@ -156,6 +156,7 @@ nav .social img{
     font-family: Inter;
     box-shadow: 4px 4px 8px rgb(187, 187, 187);
     border-radius: 5px;
+    max-width: 100%;
 }
 
 .recommendations{

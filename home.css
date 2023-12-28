@@ -5,6 +5,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 .navbar, 
 .navbar li, 
 .navbar a{
@@ -16,23 +17,23 @@
     font-weight: bold;
 }
 .logo{
-    justify-content: space-between;
-    align-items: center;
     margin: auto;
     text-decoration: none;
-
     font-family: Arial;
-    font-size: 14px;
 }
 .logo h1{
     color: black;
+    font-size: 20px;
 }
 .logo p{
     color: #727272;
+    font-size: 14px;
 }
 nav .container{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
+    max-width: 95%;
+    padding-left: 2em;
 }
 .navbar{
     display: flex;
@@ -64,7 +65,6 @@ nav .container{
 }
 nav .social{
     display: flex;
-    width: 30%;
     justify-content: space-between;
     align-items: center;
     margin: auto;
@@ -151,75 +151,41 @@ nav .social img{
     filter: contrast(85%);
 }
 
-.home2{
+.recent{
     background-color: #f0f0f0;
 }
-.home2 .contents{
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    width: 63em;
-}
-.home2 .container{
+.recent .container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5em;
     margin: 7em;
-    padding-top: 16em;
+    padding-top: 14em;
     padding-bottom: 25em;
     margin-top: 5em;
     margin-bottom: 0em;
 }
-.home2 .number{
-    z-index: 1;
-    position: relative;
-    font-family: inter;
-    font-weight: bold;
-    color: white;
-    padding: 4px;
-    top: 35rem;
-    left: -33.1em;
-}
-.home2 .content-title{
-    z-index: 1;
-    position: absolute;
-    top: 55.5em;
-    left: 11em;
-    font-family: inter;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 10px;
-    padding: 6px;
-    color: white;
-}
-.home2 h1{
+.recent h1{
     font-size: 100px;
     line-height: 0.9em;
     font-family: Inter;
 }
-.home2 .images{
-    overflow: hidden;
-    display: inline-flex;
-    width: 64em;
-    padding: 5rem;
-    margin: -1em;
-    background: linear-gradient(to bottom, #000000, #808080);
+.recent .content-header{
+    display: flex;
+    justify-content: space-between;
+    gap: 34em;
+    align-items: center;
 }
-.home2 .images img{
-    transition: .5s ease;
-    margin-left: -3em;
-    width: 60em;
-}
-.home2 .images img:hover{
-    transition: .5s ease;
-    height: auto;
-    transform: scale(1.5);
-}
-.home2 .viewall{
+.recent a img{
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 1em;
+}
+.recent .viewall{
+    display: flex;
     align-items: center;
     padding: 20px;
     background-color: white;
@@ -232,12 +198,46 @@ nav .social img{
     text-decoration: none;
     gap: 10px;
 }
-.home2 .contents img{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.recent .number{
+    z-index: 1;
     position: relative;
-    width: 1em;
+    font-family: inter;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+    padding: 4px;
+    top: 28rem;
+    left: 0em;
+}
+.recent .content-title{
+    z-index: 1;
+    position: relative;
+    top: -1em;
+    left: 0rem;
+    font-family: inter;
+    font-weight: bold;
+    font-size: 22px;
+    color: white;
+}
+.recent .content{
+    overflow: hidden;
+    padding: 1rem 2rem 7rem;
+    background: linear-gradient(to top, #000000, #2c2c2c);
+    width: 63rem;
+    height: 32em;
+    margin: auto;
+    box-shadow: 0 5px 20px 0 rgba(97, 97, 97, 0.5);
+}
+.content img{
+    transition: .5s ease;
+    padding: 0em;
+    max-width: 100%;
+    image-rendering: optimizeQuality;
+}
+.content img:hover{
+    transition: .5s ease;
+    height: auto;
+    transform: scale(1.8);
 }
 
 footer .container{
@@ -268,4 +268,249 @@ footer .social{
 }
 footer .social img{
     height: 1.8em;
+}
+
+
+@media screen and (max-width: 425px) {
+    .logo{
+        margin: 2em;
+        font-family: Arial;
+        font-size: 14px;
+        grid-column: 1 / span 3;
+    }
+    .logo h1{
+        color: black;
+        font-size: 15px;
+    }
+    .logo p{
+        color: #727272;
+        font-size: 12px;
+    }
+    .navbar a{
+        font-size: 13px;
+    }
+    nav .container{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        margin: 0px;
+        padding-left: 0px;
+        width: 425px;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        gap: 3.3em;
+        margin: auto;
+        padding: 0em;
+        grid-column: 1 / span 2;
+    }
+    nav .social{
+        position: relative;
+        top: -3.5em;
+        left: -3em;
+        display: flex;
+        width: 10%;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        gap: 5px;
+        grid-column: 3;
+    }
+    nav .social img{
+        height: 1.4em;
+    }
+
+    .home{
+        display: flex;
+        margin: -2em 0em 0em;
+        padding-left: 2em;
+        padding-right: 3em;
+        max-width: 100%;
+    }
+    .home .pfp{
+        height: 10em;
+    }
+    .home p{
+        font-size: 10px;
+    }
+    .home .buttons a{
+        font-size: 10px;
+    }
+    .home .btn1{
+        padding: 10px;
+    }
+    .home .btn2{
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo{
+        margin: auto;
+        font-family: Arial;
+        font-size: 14px;
+    }
+    .logo h1{
+        color: black;
+        font-size: 15px;
+    }
+    .logo p{
+        color: #727272;
+        font-size: 12px;
+    }
+    .navbar a{
+        font-size: 13px;
+    }
+    nav .container{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        margin: 0px;
+        padding-left: 0px;
+        width: 768px;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+        padding: 5em 0em;
+    }
+    nav .social{
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        gap: 5px;
+    }
+
+    .home{
+        display: flex;
+        margin: -2em 0em 0em;
+        padding-left: 2em;
+        padding-right: 3em;
+        max-width: 100%;
+    }
+    .home .pfp{
+        height: 18em;
+    }
+    .home p{
+        font-size: 15px;
+    }
+    .home .buttons a{
+        font-size: 14px;
+    }
+    .home .btn1{
+        padding: 10px 2rem 5px 2rem;
+    }
+    .home .btn2{
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .logo{
+        margin: auto;
+        font-family: Arial;
+        font-size: 14px;
+    }
+    .logo h1{
+        color: black;
+        font-size: 18px;
+    }
+    .logo p{
+        color: #727272;
+        font-size: 13px;
+    }
+    nav .container{
+        width: 1024px;
+        margin: 0;
+        padding-left: 0px;
+    }
+    .navbar{
+        width: 80%;
+        margin: auto;
+        padding: 5em 0em;
+    }
+    nav .social{
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        gap: 5px;
+    }
+
+    .home{
+        display: flex;
+        margin: -2em 0em 0em;
+        padding-left: 2em;
+        padding-right: 3em;
+        max-width: 100%;
+    }
+    .home .pfp{
+        height: 19em;
+    }
+    .home p{
+        font-size: 18px;
+    }
+    .home .btn1{
+        padding: 9px 5rem 9px 5rem;
+    }
+    .home .btn2{
+        padding: 12px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .logo{
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        text-decoration: none;
+        
+        font-family: Arial;
+    }
+    nav .container{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        margin: auto;
+        width: 1440px;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        margin: auto;
+        padding: 5em 0em;
+    }
+    nav .social{
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        gap: 5px;
+    }
+
+    .home{
+        height: 460px !important;
+        display: flex;
+        margin: -2em 0em 0em;
+        justify-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        max-width: 100%;
+    }
+    .home .pfp{
+        margin-top: -.2em;
+        height: 20em;
+        border-radius: 42% 58% 70% 30% / 69% 56% 44% 31% ;
+        box-shadow: 5px 10px 10px 1px rgb(190, 190, 190);
+        filter: saturate(150%);
+    }
 }

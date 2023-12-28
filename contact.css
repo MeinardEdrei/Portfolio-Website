@@ -73,13 +73,16 @@ nav .social img{
 
 section{
     padding: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 section .container{
     display: flex;
     padding: 10rem;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.1);
-    margin: 3em 11em 20em;
+    margin: 2em 0em 12em;
     max-width: 60em;
     background-color: white;
 }
