@@ -33,7 +33,6 @@ nav .container{
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     max-width: 95%;
-    padding-left: 2em;
 }
 .navbar{
     display: flex;
@@ -75,10 +74,13 @@ nav .social img{
 }
 
 .home{
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    gap: 0em;
     height: 460px !important;
-    display: flex;
     margin: -2em 0em 0em;
-    justify-content: space-evenly;
+    padding: 0em 7em 0em;
+    justify-content: center;
     align-items: center;
 }
 .home .pfp{
@@ -271,6 +273,188 @@ footer .social img{
 }
 
 
+
+
+@media screen and (max-width: 1440px) {
+    .logo{
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        text-decoration: none;
+        
+        font-family: Arial;
+    }
+    .logo h1{
+        color: black;
+        font-size: 21px;
+    }
+    .logo p{
+        color: #727272;
+        font-size: 14px;
+    }
+    nav .container{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        margin: auto;
+        padding: 0;
+        max-width: 1440px;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 65%;
+        margin: auto;
+        padding: 5em 0em;
+    }
+    nav .social{
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        gap: 5px;
+    }
+
+    .home{
+        height: 460px !important;
+        margin: -2em 0em 0em;
+        justify-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        max-width: 100%;
+    }
+    .home .pfp{
+        margin-top: -.2em;
+        height: 21em;
+        border-radius: 42% 58% 70% 30% / 69% 56% 44% 31% ;
+        box-shadow: 5px 10px 10px 1px rgb(190, 190, 190);
+        filter: saturate(150%);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .logo{
+        margin: auto;
+        margin-left: 4em;
+        font-family: Arial;
+        font-size: 14px;
+    }
+    .logo h1{
+        color: black;
+        font-size: 18px;
+    }
+    .logo p{
+        color: #727272;
+        font-size: 13px;
+    }
+    nav .container{
+        width: 1024px;
+        margin: 0;
+        padding-left: 0px;
+    }
+    .navbar{
+        width: 80%;
+        margin: auto;
+        padding: 5em 0em;
+    }
+    nav .social{
+        display: flex;
+        width: 30%;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        gap: 5px;
+    }
+
+    .home{
+        margin: -2em 0em 0em;
+        padding-left: 3em;
+        padding-right: 3em;
+        max-width: 100%;
+    }
+    .home .pfp{
+        height: 19em;
+    }
+    .home p{
+        font-size: 18px;
+    }
+    .home .btn1{
+        padding: 9px 5rem 9px 5rem;
+    }
+    .home .btn2{
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo{
+        margin: auto;
+        font-family: Arial;
+        font-size: 15px;
+    }
+    .logo h1{
+        color: black;
+        font-size: 15px;
+    }
+    .logo p{
+        color: #727272;
+        font-size: 12px;
+    }
+    nav .container{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        margin: 0px;
+        padding-left: 0px;
+        width: 768px;
+    }
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        margin: auto;
+        padding: 5em 0em;
+        font-size: 14px;
+    }
+    nav .social{
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        gap: 5px;
+        font-size: 14px;
+    }
+
+    .home{
+        display: flex;
+        margin: -2em 0em 0em;
+        padding-left: 2.5em;
+        padding-right: 3em;
+        max-width: 100%;
+    }
+    .home .pfp{
+        height: 14em;
+    }
+    .home .highlight1{
+        height: 2em;
+        font-weight: bold;
+        color: #353535;
+        padding-bottom: 0px;
+        border-bottom: 1px solid rgb(128, 128, 128);
+    }
+    .home .buttons a{
+        font-size: 14px;
+    }
+    .home .btn1{
+        padding: 10px 1rem 1px 1rem;
+    }
+    .home .btn2{
+        padding: 12px;
+    }
+}
+
 @media screen and (max-width: 425px) {
     .logo{
         margin: 2em;
@@ -287,7 +471,7 @@ footer .social img{
         font-size: 12px;
     }
     .navbar a{
-        font-size: 13px;
+        font-size: 14px;
     }
     nav .container{
         display: grid;
@@ -333,7 +517,7 @@ footer .social img{
         height: 10em;
     }
     .home p{
-        font-size: 10px;
+        font-size: 14px;
     }
     .home .buttons a{
         font-size: 10px;
@@ -346,11 +530,12 @@ footer .social img{
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 320px) {
     .logo{
-        margin: auto;
+        margin: 2em;
         font-family: Arial;
         font-size: 14px;
+        grid-column: 1 / span 3;
     }
     .logo h1{
         color: black;
@@ -361,30 +546,37 @@ footer .social img{
         font-size: 12px;
     }
     .navbar a{
-        font-size: 13px;
+        font-size: 14px;
     }
     nav .container{
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
         margin: 0px;
         padding-left: 0px;
-        width: 768px;
+        width: 425px;
     }
     .navbar{
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 80%;
+        gap: 3.3em;
         margin: auto;
-        padding: 5em 0em;
+        padding: 0em;
+        grid-column: 1 / span 2;
     }
     nav .social{
+        position: relative;
+        top: -3.5em;
+        left: -3em;
         display: flex;
-        width: 30%;
+        width: 10%;
         justify-content: space-between;
         align-items: center;
         margin: auto;
         gap: 5px;
+        grid-column: 3;
+    }
+    nav .social img{
+        height: 1.4em;
     }
 
     .home{
@@ -395,122 +587,18 @@ footer .social img{
         max-width: 100%;
     }
     .home .pfp{
-        height: 18em;
+        height: 10em;
     }
     .home p{
-        font-size: 15px;
+        font-size: 14px;
     }
     .home .buttons a{
-        font-size: 14px;
+        font-size: 10px;
     }
     .home .btn1{
-        padding: 10px 2rem 5px 2rem;
+        padding: 10px;
     }
     .home .btn2{
-        padding: 12px;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .logo{
-        margin: auto;
-        font-family: Arial;
-        font-size: 14px;
-    }
-    .logo h1{
-        color: black;
-        font-size: 18px;
-    }
-    .logo p{
-        color: #727272;
-        font-size: 13px;
-    }
-    nav .container{
-        width: 1024px;
-        margin: 0;
-        padding-left: 0px;
-    }
-    .navbar{
-        width: 80%;
-        margin: auto;
-        padding: 5em 0em;
-    }
-    nav .social{
-        display: flex;
-        width: 30%;
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-        gap: 5px;
-    }
-
-    .home{
-        display: flex;
-        margin: -2em 0em 0em;
-        padding-left: 2em;
-        padding-right: 3em;
-        max-width: 100%;
-    }
-    .home .pfp{
-        height: 19em;
-    }
-    .home p{
-        font-size: 18px;
-    }
-    .home .btn1{
-        padding: 9px 5rem 9px 5rem;
-    }
-    .home .btn2{
-        padding: 12px;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .logo{
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-        text-decoration: none;
-        
-        font-family: Arial;
-    }
-    nav .container{
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        margin: auto;
-        width: 1440px;
-    }
-    .navbar{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 80%;
-        margin: auto;
-        padding: 5em 0em;
-    }
-    nav .social{
-        display: flex;
-        width: 30%;
-        justify-content: space-between;
-        align-items: center;
-        margin: auto;
-        gap: 5px;
-    }
-
-    .home{
-        height: 460px !important;
-        display: flex;
-        margin: -2em 0em 0em;
-        justify-content: center;
-        justify-content: space-evenly;
-        align-items: center;
-        max-width: 100%;
-    }
-    .home .pfp{
-        margin-top: -.2em;
-        height: 20em;
-        border-radius: 42% 58% 70% 30% / 69% 56% 44% 31% ;
-        box-shadow: 5px 10px 10px 1px rgb(190, 190, 190);
-        filter: saturate(150%);
+        padding: 10px;
     }
 }
