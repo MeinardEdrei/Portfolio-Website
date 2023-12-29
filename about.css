@@ -4,6 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: inter;
 }
 
 .navbar, 
@@ -23,13 +24,14 @@
     text-decoration: none;
 
     font-family: Arial;
-    font-size: 14px;
 }
 .logo h1{
     color: black;
+    font-size: 21px;
 }
 .logo p{
     color: #727272;
+    font-size: 14px;
 }
 nav .container{
     display: grid;
