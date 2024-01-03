@@ -72,6 +72,22 @@ nav .social img{
     bottom: -7px;
 }
 
+#top-button{
+    height: 50px;
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    border-radius: 1em;
+    padding: 1em;
+    right: 6em;
+    top: 5em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+}
 .about .container{
     background-color: #f0f0f0;
     cursor: default;
