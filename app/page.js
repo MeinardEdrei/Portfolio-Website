@@ -11,7 +11,7 @@ export default function Home() {
           </h1>
           <Link
             className="xl:text-sm text-xs text-[var(--secondary)]"
-            href="/Home">
+            href="/About">
             Go to next page (L)
           </Link>
         </div>
