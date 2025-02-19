@@ -10,6 +10,11 @@ const Header = () => {
   return (
     <div>
       <section>
+        <div className="md:flex hidden gap-5 text-sm">
+          <Link href="/About">ABOUT ME (H)</Link>
+          <Link href="/Portfolio">PORTFOLIO (J)</Link>
+          <Link href="/Contact">CONTACT (L)</Link>
+        </div>
         <div className="md:hidden flex place-self-end">
           <button onClick={() => setMenuOpen(true)} className={menuOpen ? `hidden` : ``}><IoIosMenu className="text-6xl" /></button>
         </div>
