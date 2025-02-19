@@ -8,7 +8,7 @@ export default function Layout_Client({ children }) {
   return (
     <div>
       {pathname !== '/' && <Header />}
-      <main>
+      <main className="mb-20">
         {children}
       </main>
     </div>
