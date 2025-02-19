@@ -9,14 +9,14 @@ const Header = () => {
 
   return (
     <div>
-      <section>
-        <div className="md:flex hidden gap-5 text-sm">
+      <section className="flex md:justify-center md:p-16">
+        <div className="md:flex hidden gap-5 text-xs">
           <Link href="/About">ABOUT ME (H)</Link>
           <Link href="/Portfolio">PORTFOLIO (J)</Link>
           <Link href="/Contact">CONTACT (L)</Link>
         </div>
-        <div className="md:hidden flex place-self-end">
-          <button onClick={() => setMenuOpen(true)} className={menuOpen ? `hidden` : ``}><IoIosMenu className="text-6xl" /></button>
+        <div className="fixed top-10 border-[1px] right-0 rounded-md bg-[var(--background)] md:hidden flex place-self-end">
+          <button onClick={() => setMenuOpen(true)} className={menuOpen ? `hidden` : ``}><IoIosMenu className="text-5xl" /></button>
         </div>
       </section>
       <div className={`fixed top-0 right-0 z-10 flex flex-col bg-[var(--background)] h-screen p-16 gap-10 
