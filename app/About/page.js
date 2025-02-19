@@ -15,7 +15,7 @@ const page = () => {
     <div>
       <section className="flex justify-center items-center">
         <div className="bg-[var(--secondary-background)] md:w-[50%] w-[90%] h-screen rounded-md">
-          <div className="flex justify-center items-center bg-[--primary] p-2 text-sm">about-me~</div>
+          <div className="flex justify-center items-center bg-[--primary] p-2 text-sm text-[var(--text-inverted)]">about-me~</div>
           <div className="flex flex-col gap-28 p-5">
             <div className="flex flex-col gap-5">
               <h1 className="md:text-2xl text-lg font-semibold">
