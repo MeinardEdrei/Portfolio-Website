@@ -4,6 +4,9 @@ import Layout_Client from "./layout_client";
 export const metadata = {
   title: "Portfolio",
   description: "Portfolio by Meinard Edrei",
+  icons: {
+    icon: '/logo.png'
+  }
 };
 
 export default function RootLayout({ children }) {
