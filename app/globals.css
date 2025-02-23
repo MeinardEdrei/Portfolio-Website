@@ -27,4 +27,9 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Inter', sans-serif;
+  margin-top: 5em;
+}
+
+h2 {
+  font-weight: bold;
 }
