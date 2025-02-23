@@ -1,5 +1,5 @@
 'use client'
-import { IoIosMenu } from "react-icons/io";
+import { CiSettings } from "react-icons/ci";
 import { IoIosClose } from "react-icons/io";
 import { useState } from 'react';
 import Link from "next/link";
@@ -15,8 +15,8 @@ const Header = () => {
           <Link href="/Portfolio">PORTFOLIO (J)</Link>
           <Link href="/Contact">CONTACT (L)</Link>
         </div>
-        <div className="fixed top-10 border-[1px] right-0 rounded-md bg-[var(--background)] md:hidden flex place-self-end">
-          <button onClick={() => setMenuOpen(true)} className={menuOpen ? `hidden` : ``}><IoIosMenu className="text-5xl" /></button>
+        <div className="fixed top-10 border-[1px] right-5 rounded-md bg-[var(--background)] md:hidden flex place-self-end">
+          <button onClick={() => setMenuOpen(true)} className={menuOpen ? `hidden` : ``}><CiSettings className="text-3xl" /></button>
         </div>
       </section>
       <div className={`fixed top-0 right-0 z-10 flex flex-col bg-[var(--background)] h-screen p-16 gap-10 
