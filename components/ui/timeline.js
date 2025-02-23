@@ -2,6 +2,7 @@
 import { useScroll, useTransform, motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import Image from 'next/image';
+import Link from "next/link";
 
 export const Timeline = ({
   data
@@ -27,7 +28,7 @@ export const Timeline = ({
 
   return (
     (<div
-      className="w-full bg-white dark:bg-neutral-950 font-sans md:px-10"
+      className="w-full bg-white dark:bg-black font-sans md:px-10"
       ref={containerRef}>
       <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
@@ -36,6 +37,9 @@ export const Timeline = ({
         <p
           className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
           Each line of code represents progress. This section showcases my journey—from the fundamentals to mastering full-stack development and to many more.
+        </p>
+        <p className="mt-2 text-sm">
+          <Link href='https://github.com/MeinardEdrei' className='hover:underline font-light'> https://github.com/MeinardEdrei</Link>
         </p>
       </div>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
@@ -66,7 +70,7 @@ export const Timeline = ({
                   </div>
                 ))}
               </div>
-              <div className="grid grid-cols-2 m-5 gap-2">
+              <div className={item?.content?.image?.length > 1 ? `grid grid-cols-2 gap-2` : `m-5 gap-2`}>
                 {item.content.image.map((image, index) => (
                   <div key={index}>
                     < Image
