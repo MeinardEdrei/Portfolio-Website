@@ -64,14 +64,14 @@ export const Timeline = ({
                 {item.title}
               </h3>
               <div className="flex flex-col gap-5 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                {item.content.caption.map((text, index) => (
+                {item.content?.caption?.map((text, index) => (
                   <div key={index}>
                     <p className="text-sm" dangerouslySetInnerHTML={{ __html: text }}></p>
                   </div>
                 ))}
               </div>
               <div className={item?.content?.image?.length > 1 ? `grid grid-cols-2 gap-2` : `m-5 gap-2`}>
-                {item.content.image.map((image, index) => (
+                {item.content?.image?.map((image, index) => (
                   <div key={index}>
                     < Image
                       src={image}
