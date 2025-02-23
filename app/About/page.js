@@ -14,7 +14,7 @@ const page = () => {
   return (
     <div>
       <section className="flex justify-center items-center">
-        <div className="bg-[var(--secondary-background)] md:w-[50%] w-[90%] h-screen rounded-md">
+        <div className="bg-[var(--secondary-background)] md:w-[70%] w-[90%] h-screen rounded-md">
           <div className="flex justify-center items-center bg-[--primary] p-2 text-sm text-[var(--text-inverted)]">about-me~</div>
           <div className="flex flex-col gap-28 p-5">
             <div className="flex flex-col gap-5">
@@ -23,7 +23,7 @@ const page = () => {
               </h1>
               <div className="flex flex-col gap-3">
                 <p>
-                  Aspiring AI Software Engineer and full-stack developer pursuing a Bachelor of Science in Application Development at the University of Makati.
+                  A Full-Stack Developer pursuing a Bachelor of Science in Application Development at the University of Makati.
                 </p>
                 <p>
                   I lead projects in web development, UI/UX design, and executable applications.
@@ -42,16 +42,16 @@ const page = () => {
                 <h2>
                   Interested in hiring me to work on a project?
                 </h2>
-                <p>
+                <li>
                   I’m looking for a <i>software engineer</i> position or if you have an offer, please message or email me!
-                </p>
+                </li>
                 <h2>
                   Want to hire me as a freelancer/intern?
                 </h2>
-                <p>
+                <li>
                   <Link href="https://www.instagram.com/meinardedreii/" className="underline">Message</Link> or
                   <Link href="/Contact" className="underline">Email</Link> me so that we can discuss about it!
-                </p>
+                </li>
               </div>
             </div>
             <div className="flex flex-col gap-5">
