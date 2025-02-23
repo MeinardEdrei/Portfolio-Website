@@ -31,6 +31,20 @@ const page = () => {
         ]
       }
     },
+    {
+      title: 'November, 2024',
+      content: {
+        caption: [
+          "Leading and Developing Eventure, an event management web application. Our client is CSOA (The office who handles events in the University of Makati)."
+        ],
+        image: [
+          '/Eventure_01.png',
+          '/Eventure_02.png',
+          '/Eventure_03.png',
+          '/Eventure_04.png',
+        ]
+      }
+    }
   ];
 
   return (
