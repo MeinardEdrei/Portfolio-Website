@@ -10,6 +10,7 @@ export const Timeline = ({
   const ref = useRef(null);
   const containerRef = useRef(null);
   const [height, setHeight] = useState(0);
+  const [selectedImage, setSelectedImage] = useState('');
 
   useEffect(() => {
     if (ref.current) {
@@ -25,6 +26,14 @@ export const Timeline = ({
 
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
+
+  const viewImage = (image) => {
+    setSelectedImage(image);
+  }
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  }
 
   return (
     (<div
@@ -70,14 +79,14 @@ export const Timeline = ({
                   </div>
                 ))}
               </div>
-              <div className={item?.content?.image?.length > 1 ? `grid grid-cols-2 gap-2` : `m-5 gap-2`}>
+              <div className={item?.content?.image?.length > 1 ? `grid md:grid-cols-2 gap-2` : `m-5 gap-2`}>
                 {item.content?.image?.map((image, index) => (
-                  <div key={index}>
+                  <div key={index} onClick={() => viewImage(image)} className="cursor-pointer">
                     < Image
                       src={image}
                       width={500}
                       height={500}
-                      className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                      className="rounded-lg object-contain h-20 md:h-44 lg:h-60 w-full cursor-zoom-in shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
                       alt='Experience Photo'
                     />
                   </div>
@@ -86,6 +95,18 @@ export const Timeline = ({
             </div>
           </div>
         ))}
+        {/* Modal for viewing images */}
+        {selectedImage && (
+          <div className="fixed z-50 backdrop-blur-sm top-0 left-0 flex justify-center items-center w-full h-full" onClick={closeModal}>
+            <Image
+              src={selectedImage}
+              height={500}
+              width={500}
+              alt="Viewed Image"
+              className="rounded-md md:h-[50vw] md:w-[50vw] md:object-contain"
+            />
+          </div>
+        )}
         <div
           style={{
             height: height + "px",
