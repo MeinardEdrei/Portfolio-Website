@@ -6,19 +6,19 @@
 
 
 :root {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --text-inverted: #212529; 
-  --secondary-background: #0a0a0a;
-  --primary: #A8DADC;
-}
-
-.light-theme {
   --background: #eceff1;
   --foreground: #212529;
   --text-inverted: #ededed; 
   --secondary-background: #F8F9FA;
   --primary: #1D3557;
+}
+
+.dark-theme {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --text-inverted: #212529; 
+  --secondary-background: #0a0a0a;
+  --primary: #A8DADC;
  }
 
 @layer utilities {

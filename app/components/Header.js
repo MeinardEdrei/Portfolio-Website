@@ -9,23 +9,23 @@ import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [currentTheme, setCurrentTheme] = useState('dark');
+  const [currentTheme, setCurrentTheme] = useState('light');
   const [showGuide, setShowGuide] = useState(true);
   const menuRef = useRef();
   const guideRef = useRef();
   const router = useRouter();
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    const savedTheme = localStorage.getItem('theme') || 'light';
 
-    if (savedTheme === 'light') {
-      setCurrentTheme('light');
-      document.body.classList.add('light-theme');
-      document.documentElement.classList.remove('dark');
-    } else {
+    if (savedTheme === 'dark') {
       setCurrentTheme('dark');
-      document.body.classList.remove('light-theme');
-      document.documentElement.classList.add('dark');
+      document.body.classList.add('dark-theme');
+      document.documentElement.classList.remove('light');
+    } else {
+      setCurrentTheme('light');
+      document.body.classList.remove('dark-theme');
+      document.documentElement.classList.add('light');
     }
   }, []);
 
@@ -33,12 +33,12 @@ const Header = () => {
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     setCurrentTheme(newTheme);
 
-    if (newTheme === 'light') {
-      document.body.classList.add('light-theme');
-      document.documentElement.classList.remove('dark');
+    if (newTheme === 'dark') {
+      document.body.classList.add('dark-theme');
+      document.documentElement.classList.remove('light');
     } else {
-      document.body.classList.remove('light-theme');
-      document.documentElement.classList.add('dark');
+      document.body.classList.remove('dark-theme');
+      document.documentElement.classList.add('light');
     }
     localStorage.setItem('theme', newTheme);
   };
