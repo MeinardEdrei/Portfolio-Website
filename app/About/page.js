@@ -5,10 +5,11 @@ import { RiNextjsFill } from "react-icons/ri";
 import { RiReactjsFill } from "react-icons/ri";
 import { FaFigma, FaGitAlt, FaJava, FaNodeJs, FaPhp } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiCplusplus, SiMysql, SiVite } from "react-icons/si";
+import { SiCloudinary, SiCplusplus, SiMysql, SiVite } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import { SiMongodb } from "react-icons/si";
 import { DiVim } from "react-icons/di";
+import { AiOutlineDotNet } from "react-icons/ai";
 
 const page = () => {
   return (
@@ -78,6 +79,8 @@ const page = () => {
                   <FaFigma />
                   <DiVim />
                   <SiVite />
+                  <AiOutlineDotNet />
+                  <SiCloudinary />
                 </div>
               </div>
             </div>
