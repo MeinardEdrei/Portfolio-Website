@@ -1,10 +1,12 @@
 'use client'
 
 import { Timeline } from "@/components/ui/timeline";
-import Link from "next/link";
 import Image from "next/image";
+import { useState } from "react";
 
 const page = () => {
+  const [selectedImage, setSelectedImage] = useState('');
+
   const data = [
     {
       title: 'February, 2025',
@@ -129,6 +131,10 @@ const page = () => {
     },
   ];
 
+  const closeModal = () => {
+    setSelectedImage(null);
+  }
+
   return (
     <div>
       <section className="flex justify-center items-center">
@@ -142,6 +148,7 @@ const page = () => {
             <div className="flex flex-col">
               <Timeline
                 data={data}
+                setSelectedImage={setSelectedImage}
               />
             </div>
             <div className="w-full mt-[10vw] mb-[10vw] font-sans md:px-10">
@@ -157,13 +164,13 @@ const page = () => {
                 </div>
                 <div className="grid grid-cols-2 gap-3 mt-[5vw]">
                   {certificates.map((item, index) => (
-                    <div key={index}>
+                    <div key={index} onClick={() => setSelectedImage(item.image)}>
                       <Image
                         src={item.image}
                         height={500}
                         width={500}
                         alt="Certificate photo"
-                        className="rounded-md w-full h-full"
+                        className="rounded-md w-full h-full cursor-zoom-in"
                       />
                     </div>
                   ))}
@@ -172,6 +179,18 @@ const page = () => {
             </div>
           </div>
         </div>
+        {/* Modal for viewing images */}
+        {selectedImage && (
+          <div className="fixed z-50 backdrop-blur-sm top-0 left-0 flex justify-center items-center w-full h-full" onClick={closeModal}>
+            <Image
+              src={selectedImage}
+              height={500}
+              width={500}
+              alt="Viewed Image"
+              className="rounded-md md:h-[50vw] md:w-[50vw] md:object-contain"
+            />
+          </div>
+        )}
       </section>
     </div >
   );

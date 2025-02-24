@@ -5,12 +5,12 @@ import Image from 'next/image';
 import Link from "next/link";
 
 export const Timeline = ({
-  data
+  data,
+  setSelectedImage,
 }) => {
   const ref = useRef(null);
   const containerRef = useRef(null);
   const [height, setHeight] = useState(0);
-  const [selectedImage, setSelectedImage] = useState('');
 
   useEffect(() => {
     if (ref.current) {
@@ -29,10 +29,6 @@ export const Timeline = ({
 
   const viewImage = (image) => {
     setSelectedImage(image);
-  }
-
-  const closeModal = () => {
-    setSelectedImage(null);
   }
 
   return (
@@ -95,18 +91,6 @@ export const Timeline = ({
             </div>
           </div>
         ))}
-        {/* Modal for viewing images */}
-        {selectedImage && (
-          <div className="fixed z-50 backdrop-blur-sm top-0 left-0 flex justify-center items-center w-full h-full" onClick={closeModal}>
-            <Image
-              src={selectedImage}
-              height={500}
-              width={500}
-              alt="Viewed Image"
-              className="rounded-md md:h-[50vw] md:w-[50vw] md:object-contain"
-            />
-          </div>
-        )}
         <div
           style={{
             height: height + "px",
