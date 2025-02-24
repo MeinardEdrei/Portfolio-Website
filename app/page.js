@@ -21,9 +21,9 @@ export default function Home() {
 
   return (
     <div className="h-screen w-full">
-      <section className="flex justify-center items-center h-screen w-full">
+      <section className="flex justify-center items-center h-full w-full">
         <div className="xl:w-[40%] w-[70%] flex flex-col gap-3">
-          <h1 className="xl:text-xl text-(var(--text-color))">
+          <h1 className="md:text-base text-sm text-(var(--text-color))">
             Hi, I&apos;m <b>Meinard Edrei</b>—a passionate developer building innovative solutions and exploring emerging technologies to turn ideas into reality.
           </h1>
           <Link
