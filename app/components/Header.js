@@ -66,9 +66,9 @@ const Header = () => {
           </button>
         </div>
         <div className="flex flex-col gap-7">
-          <Link href="/About" className="text-sm">ABOUT ME (H)</Link>
-          <Link href="/Portfolio" className="text-sm">PORTFOLIO (J)</Link>
-          <Link href="/Contact" className="text-sm">CONTACT (L)</Link>
+          <Link href="/About" className="text-sm" onClick={() => setMenuOpen(false)}>ABOUT ME (H)</Link>
+          <Link href="/Portfolio" className="text-sm" onClick={() => setMenuOpen(false)}>PORTFOLIO (J)</Link>
+          <Link href="/Contact" className="text-sm" onClick={() => setMenuOpen(false)}>CONTACT (L)</Link>
         </div>
       </div>
     </div>
