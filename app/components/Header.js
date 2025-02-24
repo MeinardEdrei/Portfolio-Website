@@ -83,9 +83,15 @@ const Header = () => {
   return (
     <div>
       {/* Navigation Guide */}
-      <div ref={guideRef} className={`fixed hidden md:block bottom-20 right-5 bg-gray-800 text-white px-4 py-2 rounded-lg text-sm z-50 shadow-lg transition transform duration-300 ease-in-out 
+      <div className="fixed bottom-20 right-5 flex flex-col-reverse items-end gap-2 z-50">
+        <div ref={guideRef} className={`hidden md:block bg-gray-800 text-white px-4 py-2 rounded-lg text-xs z-50 shadow-lg transition transform duration-300 ease-in-out 
         ${showGuide ? `translate-x-0` : `translate-x-96`}`}>
-        Use <span className="font-bold">H</span>, <span className="font-bold">J</span>, <span className="font-bold">L</span> to navigate. Press <span className="font-bold">X</span> to exit.
+          Use <span className="font-bold">H</span>, <span className="font-bold">J</span>, <span className="font-bold">L</span> to navigate. Press <span className="font-bold">X</span> to exit.
+        </div>
+        <div ref={guideRef} className={`hidden md:block bg-gray-800 text-white px-4 py-2 rounded-lg text-xs z-50 shadow-lg transition transform duration-300 ease-in-out 
+        ${showGuide ? `translate-x-0` : `translate-x-96`}`}>
+          Use <span className="font-bold">SPACE</span> to scroll down, <span className="font-bold">SHIFT SPACE</span> to scroll up.
+        </div>
       </div>
 
       <section className="flex md:justify-center md:p-16 mt-[5em] md:mt-0">
