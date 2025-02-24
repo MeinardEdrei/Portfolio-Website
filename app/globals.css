@@ -14,10 +14,10 @@
 }
 
 .light-theme {
-  --background: #F8F9FA;
+  --background: #eceff1;
   --foreground: #212529;
   --text-inverted: #ededed; 
-  --secondary-background: white;
+  --secondary-background: #F8F9FA;
   --primary: #1D3557;
  }
 

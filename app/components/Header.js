@@ -19,9 +19,11 @@ const Header = () => {
     if (savedTheme === 'light') {
       setCurrentTheme('light');
       document.body.classList.add('light-theme');
+      document.documentElement.classList.remove('dark');
     } else {
       setCurrentTheme('dark');
       document.body.classList.remove('light-theme');
+      document.documentElement.classList.add('dark');
     }
   }, []);
 
@@ -31,8 +33,10 @@ const Header = () => {
 
     if (newTheme === 'light') {
       document.body.classList.add('light-theme');
+      document.documentElement.classList.remove('dark');
     } else {
       document.body.classList.remove('light-theme');
+      document.documentElement.classList.add('dark');
     }
     localStorage.setItem('theme', newTheme);
   };
