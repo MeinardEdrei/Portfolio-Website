@@ -104,11 +104,11 @@ const Header = () => {
       </div>
       <button
         onClick={toggleTheme}
-        className="fixed bottom-5 right-5 bg-[var(--background)] text-xl md:text-2xl rounded-full border-2 border-opacity-5 p-2 z-50"
+        className="fixed bottom-5 right-5 bg-neutral-800 dark:bg-neutral-200 text-white dark:text-black text-xl md:text-2xl rounded-full border-2 dark:border-neutral-700 p-2 z-50"
       >
         {currentTheme === 'light' ? <MdOutlineDarkMode /> : <MdOutlineLightMode />}
       </button>
-    </div>
+    </div >
   );
 }
 
