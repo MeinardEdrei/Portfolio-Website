@@ -6,22 +6,20 @@
 
 
 :root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --text-inverted: #212529; 
+  --secondary-background: #0a0a0a;
+  --primary: #A8DADC;
+}
+
+.light-theme {
   --background: #F8F9FA;
   --foreground: #212529;
   --text-inverted: #ededed; 
   --secondary-background: white;
   --primary: #1D3557;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --text-inverted: #212529; 
-    --secondary-background: #0a0a0a;
-    --primary: #A8DADC;
-  }
-}
+ }
 
 @layer utilities {
   @keyframes slide-in {

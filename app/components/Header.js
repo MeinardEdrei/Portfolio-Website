@@ -1,4 +1,6 @@
 'use client'
+import { MdOutlineLightMode } from "react-icons/md";
+import { MdOutlineDarkMode } from "react-icons/md";
 import { CiSettings } from "react-icons/ci";
 import { IoIosClose } from "react-icons/io";
 import { useEffect, useRef, useState } from 'react';
@@ -7,8 +9,33 @@ import { useRouter } from "next/navigation";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [currentTheme, setCurrentTheme] = useState('dark');
   const menuRef = useRef();
   const router = useRouter();
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+
+    if (savedTheme === 'light') {
+      setCurrentTheme('light');
+      document.body.classList.add('light-theme');
+    } else {
+      setCurrentTheme('dark');
+      document.body.classList.remove('light-theme');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+    setCurrentTheme(newTheme);
+
+    if (newTheme === 'light') {
+      document.body.classList.add('light-theme');
+    } else {
+      document.body.classList.remove('light-theme');
+    }
+    localStorage.setItem('theme', newTheme);
+  };
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -71,6 +98,12 @@ const Header = () => {
           <Link href="/Contact" className="text-sm" onClick={() => setMenuOpen(false)}>CONTACT (L)</Link>
         </div>
       </div>
+      <button
+        onClick={toggleTheme}
+        className="fixed bottom-5 right-5 bg-[var(--background)] text-xl md:text-2xl rounded-full border-2 border-opacity-5 p-2 z-50"
+      >
+        {currentTheme === 'light' ? <MdOutlineDarkMode /> : <MdOutlineLightMode />}
+      </button>
     </div>
   );
 }
