@@ -54,7 +54,7 @@ const page = () => {
                     Want to hire me as a freelancer/intern?
                   </h2>
                   <li>
-                    <Link href="https://www.instagram.com/meinardedreii/" className="underline">Message</Link> or
+                    <Link href="https://www.instagram.com/meinardedreii/" className="underline">Message</Link> or&nbsp;
                     <Link href="/Contact" className="underline">Email</Link> me so that we can discuss about it!
                   </li>
                 </div>
