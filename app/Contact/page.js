@@ -9,7 +9,11 @@ const page = () => {
   return (
     <div>
       <section className="flex justify-center items-center">
-        <div className="bg-[var(--secondary-background)] border-[1px] border-white/15 md:w-[70%] w-[90%] h-full rounded-md">
+        <div className="bg-[var(--secondary-background)] border-[1px] border-white/15 md:w-[70%] w-[90%] h-full rounded-md"
+          style={{
+            animation: "slide-in .3s ease-out forwards, wobble .5s ease-in-out .3s"
+          }}
+        >
           <div className="flex justify-center items-center bg-[--primary] p-2 text-sm text-[var(--text-inverted)]">contact~</div>
           <div className="flex flex-col p-5 md:px-10">
             <div className="md:px-10 py-20">
