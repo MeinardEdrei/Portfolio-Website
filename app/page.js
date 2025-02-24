@@ -7,7 +7,7 @@ export default function Home() {
       <section className="flex justify-center items-center h-screen w-full">
         <div className="xl:w-[40%] w-[70%] flex flex-col gap-3">
           <h1 className="xl:text-xl text-(var(--text-color))">
-            Hi, I’m <b>Meinard Edrei</b>—a passionate developer building innovative solutions and exploring emerging technologies to turn ideas into reality.
+            Hi, I&apos;m <b>Meinard Edrei</b>—a passionate developer building innovative solutions and exploring emerging technologies to turn ideas into reality.
           </h1>
           <Link
             className="xl:text-sm text-xs text-[var(--secondary)]"
