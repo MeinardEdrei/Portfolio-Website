@@ -1,21 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #eceff1;
+  --foreground: #212529;
+  --text-inverted: #ededed; 
+  --secondary-background: #F8F9FA;
+  --primary: #1D3557;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.dark-theme {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --text-inverted: #212529; 
+  --secondary-background: #0a0a0a;
+  --primary: #A8DADC;
+ }
+
+@layer utilities {
+  @keyframes slide-in {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
   }
+  @keyframes wobble {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    15% {
+      transform: translateX(-25px);
+    }
+    30% {
+      transform: translateX(20px);
+    }
+    45% {
+      transform: translateX(-15px);
+    }
+    60% {
+      transform: translateX(10px);
+    }
+    75% {
+      transform: translateX(-5px);
+    }
+  }
+  .animate-slide-in {
+    animation: slide-in 1s ease-out forwards;
+  }
+  .animate-wobble {
+    animation: wobble 1s ease-in-out;
+  }
+}
+
+/* Hide scrollbar for Chrome, Safari, and Opera */
+::-webkit-scrollbar {
+  display: none;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Inter', sans-serif;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+h2 {
+  font-weight: bold;
 }
