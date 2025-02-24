@@ -1,7 +1,24 @@
-import Image from "next/image";
+'use client'
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 export default function Home() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleKeybinds = (event) => {
+      if (event.key.toLowerCase() === 'l') {
+        router.push('/About');
+      }
+    }
+
+    window.addEventListener('keydown', handleKeybinds);
+    return () => {
+      window.removeEventListener('keydown', handleKeybinds);
+    }
+  }, []);
+
   return (
     <div className="h-screen w-full">
       <section className="flex justify-center items-center h-screen w-full">
