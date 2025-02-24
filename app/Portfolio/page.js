@@ -2,6 +2,7 @@
 
 import { Timeline } from "@/components/ui/timeline";
 import Link from "next/link";
+import Image from "next/image";
 
 const page = () => {
   const data = [
@@ -110,6 +111,24 @@ const page = () => {
     }
   ];
 
+  const certificates = [
+    {
+      image: '/6th_CCIS_Hackathon_2024.jpg'
+    },
+    {
+      image: '/Meinard Edrei S. Santos - ICT Network E-Certificate - 2021_page-0001.jpg'
+    },
+    {
+      image: '/Meinard Edrei S. Santos - ICT Network Certificate Day 2 - 2021_page-0001.jpg'
+    },
+    {
+      image: '/Meinard Edrei S. Santos_ICTNetwork_Networking_Pt.3 - 2022_page-0001.jpg'
+    },
+    {
+      image: '/Charting Our Future Certificate Participant MEINARD EDREI S. SANTOS - 2022_page-0001.jpg'
+    },
+  ];
+
   return (
     <div>
       <section className="flex justify-center items-center">
@@ -120,6 +139,32 @@ const page = () => {
               <Timeline
                 data={data}
               />
+            </div>
+            <div className="w-full mt-[10vw] mb-[10vw] font-sans md:px-10">
+              <div className="md:px-10">
+                <div>
+                  <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
+                    My Certifications
+                  </h2>
+                  <p
+                    className="text-sm md:text-base max-w-sm">
+                    These are my industry-related certificates that I have obtained throughout my journey from Senior High School up to this date.
+                  </p>
+                </div>
+                <div className="grid grid-cols-2 gap-3 mt-[5vw]">
+                  {certificates.map((item, index) => (
+                    <div key={index}>
+                      <Image
+                        src={item.image}
+                        height={500}
+                        width={500}
+                        alt="Certificate photo"
+                        className="rounded-md w-full h-full"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
