@@ -20,11 +20,11 @@ const Header = () => {
 
     if (savedTheme === 'dark') {
       setCurrentTheme('dark');
-      document.body.classList.add('dark-theme');
+      document.body.classList.add('dark');
       document.documentElement.classList.remove('light');
     } else {
       setCurrentTheme('light');
-      document.body.classList.remove('dark-theme');
+      document.body.classList.remove('dark');
       document.documentElement.classList.add('light');
     }
   }, []);
@@ -34,10 +34,10 @@ const Header = () => {
     setCurrentTheme(newTheme);
 
     if (newTheme === 'dark') {
-      document.body.classList.add('dark-theme');
+      document.body.classList.add('dark');
       document.documentElement.classList.remove('light');
     } else {
-      document.body.classList.remove('dark-theme');
+      document.body.classList.remove('dark');
       document.documentElement.classList.add('light');
     }
     localStorage.setItem('theme', newTheme);

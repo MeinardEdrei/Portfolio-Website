@@ -13,7 +13,7 @@
   --primary: #1D3557;
 }
 
-.dark-theme {
+.dark {
   --background: #0a0a0a;
   --foreground: #ededed;
   --text-inverted: #212529; 
