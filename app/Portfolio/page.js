@@ -5,7 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 const page = () => {
-  const [selectedImage, setSelectedImage] = useState('');
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const data = [
     {
@@ -143,19 +143,25 @@ const page = () => {
             animation: "slide-in .3s ease-out forwards, wobble .5s ease-in-out .3s"
           }}
         >
-          <div className="flex justify-center items-center bg-[--primary] rounded-t-md p-2 text-sm text-[var(--text-inverted)]">portfolio~</div>
-          <div className="flex flex-col p-5">
-            <div className="flex flex-col">
+          <div className="flex justify-center items-center bg-[--primary] rounded-t-md p-2 text-sm text-[var(--text-inverted)] font-mono">
+            portfolio~
+          </div>
+
+          <div className="p-6 md:p-10">
+            {/* Timeline Section */}
+            <div className="mb-12">
               <Timeline
                 data={data}
                 setSelectedImage={setSelectedImage}
               />
             </div>
+
+            {/* Certifications Section */}
             <div className="w-full mt-[10vw] mb-[10vw] font-sans md:px-10">
               <div className="md:px-10">
                 <div>
                   <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
-                    My Certifications
+                    -- 📜 My Certifications
                   </h2>
                   <p
                     className="text-sm md:text-base max-w-sm">
@@ -179,20 +185,35 @@ const page = () => {
             </div>
           </div>
         </div>
+
         {/* Modal for viewing images */}
         {selectedImage && (
-          <div className="fixed z-50 backdrop-blur-sm top-0 left-0 flex justify-center items-center w-full h-full" onClick={closeModal}>
-            <Image
-              src={selectedImage}
-              height={500}
-              width={500}
-              alt="Viewed Image"
-              className="rounded-md md:h-[50vw] md:w-[50vw] md:object-contain"
-            />
+          <div
+            className="fixed inset-0 z-50 flex justify-center items-center bg-black/70 backdrop-blur-sm"
+            onClick={closeModal}
+          >
+            <div className="relative max-w-[90%] max-h-[90%]">
+              <Image
+                src={selectedImage}
+                height={1000}
+                width={1000}
+                alt="Enlarged image"
+                className="rounded-lg object-contain max-h-[90vh]"
+              />
+              <button
+                className="absolute top-4 right-4 p-2 bg-black/50 hover:bg-black/80 text-white rounded-full"
+                onClick={closeModal}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+            </div>
           </div>
         )}
       </section>
-    </div >
+    </div>
   );
 }
 
