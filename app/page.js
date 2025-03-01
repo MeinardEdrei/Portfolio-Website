@@ -27,7 +27,7 @@ export default function Home() {
             Hi, I&apos;m <b>Meinard Edrei</b>—a passionate developer building innovative solutions and exploring emerging technologies to turn ideas into reality.
           </h1>
           <Link
-            className="xl:text-sm text-xs text-[var(--secondary)]"
+            className="text-xs text-[var(--secondary)]"
             href="/About">
             Go to next page (L)
           </Link>

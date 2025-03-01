@@ -44,7 +44,7 @@ export const Timeline = ({
           Each line of code represents progress. This section showcases my journey—from the fundamentals to mastering full-stack development and to many more.
         </p>
         <p className="mt-2 text-sm">
-          <Link href='https://github.com/MeinardEdrei' className='hover:underline font-light'> https://github.com/MeinardEdrei</Link>
+          <Link href='https://github.com/MeinardEdrei' className='italic hover:underline font-light'> https://github.com/MeinardEdrei</Link>
         </p>
       </div>
       <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
