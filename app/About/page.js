@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { RiNextjsFill } from "react-icons/ri";
 import { RiReactjsFill } from "react-icons/ri";
-import { FaFigma, FaGitAlt, FaJava, FaNodeJs, FaPhp } from "react-icons/fa";
+import { FaFigma, FaGitAlt, FaJava, FaLinux, FaNodeJs, FaPhp } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiCloudinary, SiCplusplus, SiMysql, SiVite } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
@@ -29,7 +29,7 @@ const page = () => {
                 </h1>
                 <div className="flex flex-col gap-3">
                   <p>
-                    A Full-Stack Developer pursuing a Bachelor of Science in Application Development at the University of Makati.
+                    A Full-Stack Developer pursuing a Bachelor of Computer Science in Application Development at the University of Makati.
                   </p>
                   <p>
                     I lead projects in web development, UI/UX design, and executable applications.
@@ -49,7 +49,7 @@ const page = () => {
                     Interested in hiring me to work on a project?
                   </h2>
                   <li>
-                    I’m looking for a <i>software engineer</i> position or if you have an offer, please message or email me!
+                    I’m looking for a <i>software engineer</i> position or if you have an offer, feel free to message or email me!
                   </li>
                   <h2>
                     Want to hire me as a freelancer/intern?
@@ -65,6 +65,7 @@ const page = () => {
                   -- 💻 Technology Stack
                 </h1>
                 <div className="flex flex-wrap gap-2 md:text-7xl text-5xl">
+                  <FaLinux />
                   <RiNextjsFill />
                   <RiReactjsFill />
                   <FaNodeJs />
