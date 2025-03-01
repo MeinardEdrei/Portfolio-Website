@@ -40,10 +40,10 @@ export const Timeline = ({
           -- 💻 My Developer Journey
         </h2>
         <p
-          className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
+          className="pl-10 text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
           Each line of code represents progress. This section showcases my journey—from the fundamentals to mastering full-stack development and to many more.
         </p>
-        <p className="mt-2 text-sm">
+        <p className="mt-2 pl-10 text-sm">
           <Link href='https://github.com/MeinardEdrei' className='italic hover:underline font-light'> https://github.com/MeinardEdrei</Link>
         </p>
       </div>

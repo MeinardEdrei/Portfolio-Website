@@ -164,11 +164,11 @@ const page = () => {
                     -- 📜 My Certifications
                   </h2>
                   <p
-                    className="text-sm md:text-base max-w-sm">
+                    className="pl-10 text-sm md:text-base max-w-sm">
                     These are my industry-related certificates that I have obtained throughout my journey from Senior High School up to this date.
                   </p>
                 </div>
-                <div className="grid grid-cols-2 gap-3 mt-[5vw]">
+                <div className="pl-10 grid grid-cols-2 gap-3 mt-[5vw]">
                   {certificates.map((item, index) => (
                     <div key={index} onClick={() => setSelectedImage(item.image)}>
                       <Image

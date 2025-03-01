@@ -20,7 +20,7 @@ const ContactPage = () => {
                 <h1 className="md:text-2xl text-lg font-semibold mb-5">
                   -- 🔗 Connect with Me
                 </h1>
-                <p>
+                <p className="max-w-sm">
                   I welcome the opportunity to discuss your project. Please contact me via <Link href='https://mail.google.com/mail/?view=cm&fs=1&to=meinardsantoss@gmail.com' className="font-medium underline">email</Link> to schedule a consultation.
                 </p>
               </div>

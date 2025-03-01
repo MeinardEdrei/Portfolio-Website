@@ -43,7 +43,7 @@ const AboutMePage = () => {
                     -- Hi, I'm Meinard 👋🏼
                   </h1>
 
-                  <div className="space-y-4">
+                  <div className="space-y-4 max-w-lg">
                     <p>
                       A Full-Stack Developer pursuing a Bachelor of Computer Science in Application Development at the University of Makati.
                     </p>
