@@ -70,7 +70,7 @@ const AboutMePage = () => {
                     <div>
                       <h3 className="font-medium mb-2">Interested in hiring me to work on a project?</h3>
                       <p className="ml-4">
-                        I'm  if you have an offer, feel free to message or email me!
+                        I'm proficient in full-stack development and project management, and I also have experiences in application development so if you have an offer, feel free to message or email me!
                       </p>
                     </div>
 
