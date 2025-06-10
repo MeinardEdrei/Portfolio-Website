@@ -70,7 +70,7 @@ const AboutMePage = () => {
                     <div>
                       <h3 className="font-medium mb-2">Interested in hiring me to work on a project?</h3>
                       <p className="ml-4">
-                        I'm looking for a <span className="italic">software engineer</span> position or if you have an offer, feel free to message or email me!
+                        I'm  if you have an offer, feel free to message or email me!
                       </p>
                     </div>
 
